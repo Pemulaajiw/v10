@@ -18,7 +18,7 @@ valid=$(curl -sS $url_izin | grep $MYIP | awk '{print $3}')
 
 echo "$username" >/usr/bin/user
 echo "$valid" >/usr/bin/e
-
+valid=$(cat /usr/bin/e)
 username=$(cat /usr/bin/user)
 # ===============================
 # TANGGAL HARI INI DAN EXPIRY
