@@ -1041,12 +1041,24 @@ echo -e "${green}           INSTALLASI Menu              ${neutral}"
 echo -e "${blue}─────────────────────────────────────────${neutral}"
 
 
-wget https://raw.githubusercontent.com/Pemulaajiw/v10/refs/heads/main/menu.zip
-    unzip menu.zip
-    chmod +x menu/*
-    mv menu/* /usr/local/sbin
-    rm -rf menu
-    rm -rf menu.zip
+mkdir -p /etc/menu
+cd /etc/menu
+
+url="https://github.com/Pemulaajiw/v10/raw/main/menu.zip"
+
+wget -O menu.zip "$url" >/dev/null 2>&1 &
+PID=$!
+loading_bar 100
+wait $PID
+
+# msbreewc
+7z e -pmOdgholrty9978 menu.zip >/dev/null 2>&1
+chmod +x * >/dev/null 2>&1
+
+mv * /usr/bin >/dev/null 2>&1
+
+rm -rf /etc/menu >/dev/null 2>&1
+rm -f menu.zip >/dev/null 2>&1
 
 cd
 
