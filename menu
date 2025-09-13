@@ -19,12 +19,14 @@ valid=$(curl -sS $url_izin | grep $MYIP | awk '{print $3}')
 echo "$username" >/usr/bin/user
 echo "$valid" >/usr/bin/e
 
+username=$(cat /usr/bin/user)
 # ===============================
 # TANGGAL HARI INI DAN EXPIRY
 # ===============================
 today=$(date +'%Y-%m-%d')
 Exp1="$valid"  # tanggal expiry
-
+d1=$(date -d "$valid" +%s)
+d2=$(date -d "$today" +%s)
 # ===============================
 # FUNGSI HITUNG SELISIH HARI & FORMAT TANGGAL
 # ===============================
