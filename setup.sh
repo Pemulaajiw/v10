@@ -1041,14 +1041,19 @@ echo -e "${green}           INSTALLASI Menu              ${neutral}"
 echo -e "${blue}─────────────────────────────────────────${neutral}"
 
 
-wget https://raw.githubusercontent.com/hidessh99/scAUTOku/refs/heads/main/menu.sh && chmod +x menu.sh && ./menu.sh
+wget https://raw.githubusercontent.com/Pemulaajiw/v10/refs/heads/main/menu.zip
+    unzip menu.zip
+    chmod +x menu/*
+    mv menu/* /usr/local/sbin
+    rm -rf menu
+    rm -rf menu.zip
 
 cd
 
 
 clear
 echo -e "${blue}─────────────────────────────────────────${neutral}"
-echo -e "${green}       INSTALLASI plugin HideSSH        ${neutral}"
+echo -e "${green}       INSTALLASI plugin RIakerSSH        ${neutral}"
 echo -e "${blue}─────────────────────────────────────────${neutral}"
 
 
@@ -1058,7 +1063,7 @@ rm -rf package-gohide.sh
 
 # cd
 # echo -e "${blue}─────────────────────────────────────────${neutral}"
-# echo -e "${green}   INSTALLASI golang bye HIdeSSH       ${neutral}"
+# echo -e "${green}   INSTALLASI golang bye RIakerSSH       ${neutral}"
 # echo -e "${blue}─────────────────────────────────────────${neutral}"
 
 
