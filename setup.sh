@@ -1050,28 +1050,6 @@ wget https://raw.githubusercontent.com/Pemulaajiw/v10/refs/heads/main/menu.zip
 
 cd
 
-
-clear
-echo -e "${blue}─────────────────────────────────────────${neutral}"
-echo -e "${green}       INSTALLASI plugin RIakerSSH        ${neutral}"
-echo -e "${blue}─────────────────────────────────────────${neutral}"
-
-
-wget https://raw.githubusercontent.com/hidessh99/scAUTOku/refs/heads/main/package-gohide.sh && chmod +x package-gohide.sh && ./package-gohide.sh
-cd 
-rm -rf package-gohide.sh
-
-# cd
-# echo -e "${blue}─────────────────────────────────────────${neutral}"
-# echo -e "${green}   INSTALLASI golang bye RIakerSSH       ${neutral}"
-# echo -e "${blue}─────────────────────────────────────────${neutral}"
-
-
-# cd
-# wget https://raw.githubusercontent.com/hidessh99/scAUTOku/refs/heads/main/backend/install-go.sh && chmod +x install-go.sh && ./install-go.sh
-# rm -rf install-go.sh
-# cd
-
 if [ -d "/root/rmck" ]; then
     rm -rf /root/rmck
 fi
