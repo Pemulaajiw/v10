@@ -127,11 +127,11 @@ print_title() {
     local text_len=${#text}
     
     local line
-    line=$(printf '━%.0s' $(seq 1 $text_len))
+    line=$(printf '━%.0s ACCOUNT ' $(seq 1 $text_len))
     
     echo
     printf "%s${color}┏━${line}━┓\n" "$padding_str"
-    printf "%s${color}┃ ACCOUNT${white}%s ${color}┃\n" "$padding_str" "$text"
+    printf "%s${color}┃ ${white}%s ${color}┃\n" "$padding_str" "$text"
     printf "%s${color}┗━${line}━┛\n${NC}" "$padding_str"
 }
 
@@ -142,11 +142,11 @@ print_titles() {
     local text_len=${#text}
     
     local line
-    line=$(printf '━%.0s' $(seq 1 $text_len))
+    line=$(printf '━%.0s PREMIUM ' $(seq 1 $text_len))
     
     echo
     printf "%s${color}┏━${line}━┓\n" "$padding_str"
-    printf "%s${color}┃ PREMIUM${white}%s ${color}┃\n" "$padding_str" "$text"
+    printf "%s${color}┃ ${white}%s ${color}┃\n" "$padding_str" "$text"
     printf "%s${color}┗━${line}━┛\n${NC}" "$padding_str"
 }
 
