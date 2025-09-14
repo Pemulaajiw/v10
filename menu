@@ -132,10 +132,10 @@ print_title() {
     lini=$(printf '%.0s' $(seq 1 $text_len))
     
 
-    printf "%s${orange}ACCOUNT ${red}━ ACCOUNT ${yellow}━ ACCOUNT ${oranges}━ ACCOUNT ${pink}━ ACCOUNT ${line}━ ACCOUNT ${light_red}━ ACCOUNT ${light_orange}━ ACCOUNT ${light_yellow}━ ACCOUNT ${dark_red}━ ACCOUNT ${dark_orange}━ ACCOUNT \n" "$padding_str"
+    printf "%s${orange}ACCOUNT ${red}━ ACCOUNT ${yellow}━ ACCOUNT ${oranges}━ ACCOUNT ${pink}━ ACCOUNT ${line}━ ACCOUNT \n" "$padding_str"
     printf "%s${white}    SSH      VMESS       VLESS      TROJAN       SSWS \n" "$padding_str"
     printf "%s${white}    $ssh        $vm           $vl           $tr            $ss \n" "$padding_str"
-    printf "%s${blue}PREMIUM ${R1}━ PREMIUM ${purple}━ PREMIUM ${green}━ PREMIUM ${blue}━ PREMIUM ${line}━ PREMIUM ${dark_gray}━ PREMIUM ${dark_blue}━ PREMIUM ${dark_green}━ PREMIUM ${dark_purple}━ PREMIUM ${dark_cyan}━ PREMIUM \n" "$padding_str"
+    printf "%s${blue}PREMIUM ${R1}━ PREMIUM ${purple}━ PREMIUM ${green}━ PREMIUM ${blue}━ PREMIUM ${line}━ PREMIUM \n" "$padding_str"
 }
 
 setup_bot_telegram() {
