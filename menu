@@ -132,10 +132,10 @@ print_title() {
     lini=$(printf '━%.0s PREMIUM ' $(seq 1 $text_len))
     
 
-    printf "%s${line}\n" "$padding_str"
-    printf "%s${white}    SSH      VMESS       VLESS      TROJAN       SSWS \n" "$padding_str" "$text"
-    printf "%s${white}    $ssh        $vm           $vl           $tr            $ss   \n" "$padding_str" "$text"
-    printf "%s${lini}\n${NC}" "$padding_str"
+    printf "%s${dark_blue_bg}${line}\e[38;5;214m%-13s %-7s %-8s %2s\n" "$padding_str"
+    printf "%s${dark_blue_bg}${white}    SSH      VMESS       VLESS      TROJAN       SSWS %-13s %-7s %-8s %2s\n" "$padding_str" "$text"
+    printf "%s${dark_blue_bg}${white}    $ssh        $vm           $vl           $tr            $ss   %-13s %-7s %-8s %2s\n" "$padding_str" "$text"
+    printf "%s${dark_blue_bg}${lini}\e[38;5;214m%-13s %-7s %-8s %2s\n${NC}" "$padding_str"
 }
 
 setup_bot_telegram() {
