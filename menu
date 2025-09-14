@@ -128,14 +128,14 @@ print_title() {
     local text_len=${#text}
     
     local line
-    line=$(printf '${orange}━ ACCOUNT${R1}━ ACCOUNT${yellow}━ ACCOUNT${blue}━ ACCOUNT${purple}━ ACCOUNT${red}━ ACCOUNT ${neutral}━%.0s' $(seq 1 $text_len))
-    lini=$(printf '${orange}━ PREMIUM${R1}━ PREMIUM${yellow}━ PREMIUM${blue}━ PREMIUM${purple}━ PREMIUM${red}━ PREMIUM ${neutral}━%.0s' $(seq 1 $text_len))
+    line=$(printf '━%.0s' $(seq 1 $text_len))
+    lini=$(printf '━%.0s' $(seq 1 $text_len))
     
 
-    printf "%s${dark_blue_bg}┏━${line}━┓\n" " \e[0m%-13s %-7s %-8s %2s $padding_str"
-    printf "%s${dark_blue_bg}${white}    SSH      VMESS       VLESS      TROJAN       SSWS\n" " \e[0m%-13s %-7s %-8s %2s $padding_str"
-    printf "%s${dark_blue_bg}${white}    $ssh        $vm           $vl           $tr            $ss\n" " \e[0m%-13s %-7s %-8s %2s $padding_str"
-    printf "%s${dark_blue_bg}┗━${line}━┛\n" " \e[0m%-13s %-7s %-8s %2s $padding_str"
+    printf "%s${orange}━ ACCOUNT${R1}━ ACCOUNT${yellow}━ ACCOUNT${blue}━ ACCOUNT${purple}━ ACCOUNT${red}━ ACCOUNT ${green}━${line}━${orange}━ ACCOUNT${R1}━ ACCOUNT${yellow}━ ACCOUNT${blue}━ ACCOUNT${purple}━ ACCOUNT${red}━ ACCOUNT \n" "$padding_str"
+    printf "%s${white}    SSH      VMESS       VLESS      TROJAN       SSWS \n" "$padding_str"
+    printf "%s${white}    $ssh        $vm           $vl           $tr            $ss \n" "$padding_str"
+    printf "%s${orange}━ PREMIUM${R1}━ PREMIUM${yellow}━ PREMIUM${blue}━ PREMIUM${purple}━ PREMIUM${red}━ PREMIUM ${green}━${line}━${orange}━ PREMIUM${R1}━ PREMIUM${yellow}━ PREMIUM${blue}━ PREMIUM${purple}━ PREMIUM${red}━ PREMIUM \n" "$padding_str"
 }
 
 setup_bot_telegram() {
