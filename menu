@@ -59,11 +59,14 @@ red="\e[38;5;196m"
 neutral="\e[0m"
 blue="\e[38;5;130m"
 orange="\e[38;5;99m"
+oranges='\e[38;5;214m' # Bold Orange (for bright effect)
 yellow="\e[38;5;226m"
 purple="\e[38;5;141m"
 bold_white="\e[1;37m"
+white='\e[1;97m'  # Bold White
 reset="\e[0m"
 pink="\e[38;5;205m"
+R1='\e[38;5;155m' # HEJO SEMU BODAS
 
 # warna gelap
 dark_gray="\e[38;5;240m"
@@ -120,7 +123,7 @@ light_yellow="\e[38;5;229m"
 print_title() {
     local text=" ~ $1 ~ "
     local padding_str="$2" # Terima padding dari luar
-    local color="${orange}"
+    local color="${oranges}"
     local text_len=${#text}
     
     local line
@@ -128,7 +131,22 @@ print_title() {
     
     echo
     printf "%s${color}┏━${line}━┓\n" "$padding_str"
-    printf "%s${color}┃ ${white}%s ${color}┃\n" "$padding_str" "$text"
+    printf "%s${color}┃ ${white}%s ACCOUNT${color}┃\n" "$padding_str" "$text"
+    printf "%s${color}┗━${line}━┛\n${NC}" "$padding_str"
+}
+
+print_titles() {
+    local text=" ~ $1 ~ "
+    local padding_str="$2" # Terima padding dari luar
+    local color="${R1}"
+    local text_len=${#text}
+    
+    local line
+    line=$(printf '━%.0s' $(seq 1 $text_len))
+    
+    echo
+    printf "%s${color}┏━${line}━┓\n" "$padding_str"
+    printf "%s${color}┃ ${white}%s PREMIUM${color}┃\n" "$padding_str" "$text"
     printf "%s${color}┗━${line}━┛\n${NC}" "$padding_str"
 }
 
@@ -169,8 +187,8 @@ echo -e "${orange} \e[38;5;196m• \e[38;5;226mDATE & TIME   \e[38;5;87m:  \e[38
 echo -e "${orange} \e[38;5;196m• \e[38;5;226mUPTIME        \e[38;5;87m:  \e[38;5;141m$(uptime -p 2>/dev/null | cut -d ' ' -f 2-10000 || echo "Unable to detect uptime")"
 echo -e "${dark_blue_bg}${pink}                   ☯ STATUS SERVICE ☯                    ${neutral}"
 echo -e "    ${yellow}XRAY \e[38;5;87m: "$(cek_status vmess@config)"${yellow}   HAPROXY \e[38;5;87m: "$(cek_status haproxy)"${yellow}  SSHOVPN \e[38;5;87m: "$(cek_status ssh)" ${neutral}"
-echo -e "$(print_title)[ACCOUNT]  :  SSH      VMESS       VLESS      TROJAN       SSWS         "
-echo -e "$(print_title)[PREMIUM]  :  $ssh        $vm           $vl           $tr            $ss           "
+echo -e "$(print_title):  SSH      VMESS       VLESS      TROJAN       SSWS         "
+echo -e "$(print_titles):  $ssh        $vm           $vl           $tr            $ss           "
 echo -e "${dark_blue_bg}${pink}                   ☯ MENU AUTOSCRIPT ☯                   ${neutral}"
 echo -e " ${orange}[$green 01 ${orange}] \e[38;5;226mSsh Menu        ${orange}[$green 05 ${orange}] \e[38;5;226mShdwscks Menu    ${neutral}"
 echo -e " ${orange}[$green 02 ${orange}] \e[38;5;226mVmess Menu      ${orange}[$green 06 ${orange}] \e[38;5;226mNotif Bot Menu   ${neutral}"
