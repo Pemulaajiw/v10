@@ -131,7 +131,7 @@ print_title() {
     
     echo
     printf "%s${color}┏━${line}━┓\n" "$padding_str"
-    printf "%s${color}┃ ${white}%s ACCOUNT${color}┃\n" "$padding_str" "$text"
+    printf "%s${color}┃ ${white}ACCOUNT%s ${color}┃\n" "$padding_str" "$text"
     printf "%s${color}┗━${line}━┛\n${NC}" "$padding_str"
 }
 
@@ -146,7 +146,7 @@ print_titles() {
     
     echo
     printf "%s${color}┏━${line}━┓\n" "$padding_str"
-    printf "%s${color}┃ ${white}%s PREMIUM${color}┃\n" "$padding_str" "$text"
+    printf "%s${color}┃ ${white}PREMIUM%s ${color}┃\n" "$padding_str" "$text"
     printf "%s${color}┗━${line}━┛\n${NC}" "$padding_str"
 }
 
