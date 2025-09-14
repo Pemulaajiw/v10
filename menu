@@ -133,8 +133,8 @@ print_title() {
     
     echo
     printf "%s${color}┏━${line}━┓\n" "$padding_str"
-    printf "%s${color}┃ ${white}   SSH      VMESS       VLESS      TROJAN       SSWS %s ${color}┃\n" "$padding_str" "$text"
-    printf "%s${color}┃ ${white}   $ssh        $vm           $vl           $tr            $ss   %s ${color}┃\n" "$padding_str" "$text"
+    printf "%s${color}┃ ${white}    SSH      VMESS       VLESS      TROJAN       SSWS %s ${color}┃\n" "$padding_str" "$text"
+    printf "%s${color}┃ ${white}    $ssh        $vm           $vl           $tr            $ss   %s ${color}┃\n" "$padding_str" "$text"
     printf "%s${colo1}┗━${lini}━┛\n${NC}" "$padding_str"
 }
 
