@@ -128,14 +128,14 @@ print_title() {
     local text_len=${#text}
     
     local line
-    line=$(printf 'ACCOUNT ━%.0s' $(seq 1 $text_len${neutral}))
-    lini=$(printf 'PREMIUM ━%.0s' $(seq 1 $text_len${neutral}))
+    line=$(printf 'ACCOUNT ━%.0s ACCOUNT' $(seq 1 $text_len))
+    lini=$(printf 'PREMIUM ━%.0s PREMIUM' $(seq 1 $text_len))
     
 
-    printf "%s${dark_blue_bg} \e[38;5;214m%-13s %-7s %-8s %2s${line}\n" "$padding_str"
+    printf "%s${dark_blue_bg} \e[38;5;214m%-13s %-7s %-8s %2s${line}${neutral}\n" "$padding_str"
     printf "%s${dark_blue_bg}${white}    SSH      VMESS       VLESS      TROJAN       SSWS \e[0m%-13s %-7s %-8s %2s\n" "$padding_str"
     printf "%s${dark_blue_bg}${white}    $ssh        $vm           $vl           $tr            $ss   \e[0m%-13s %-7s %-8s %2s\n" "$padding_str"
-    printf "%s${dark_blue_bg} \e[38;5;214m%-13s %-7s %-8s %2s${lini}\n${NC}" "$padding_str"
+    printf "%s${dark_blue_bg} \e[38;5;214m%-13s %-7s %-8s %2s${lini}${neutral}\n${NC}" "$padding_str"
 }
 
 setup_bot_telegram() {
