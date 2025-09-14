@@ -13,10 +13,12 @@ date_list=$(date +"%Y-%m-%d" -d "$data_server")
 # ===============================
 MYIP=$ipsaya
 url_izin="https://raw.githubusercontent.com/Pemulaajiw/v10/main/izin"
-username=$(curl -sS $url_izin | grep $MYIP | awk '{print $2}')
-valid=$(curl -sS $url_izin | grep $MYIP | awk '{print $3}')
-
+rm -f /usr/bin/user
+username=$(curl ${url_izin} | grep $MYIP | awk '{print $2}')
 echo "$username" >/usr/bin/user
+
+rm -f /usr/bin/e
+valid=$(curl ${url_izin} | grep $MYIP | awk '{print $3}')
 echo "$valid" >/usr/bin/e
 username=$(cat /usr/bin/user)
 oid=$(cat /usr/bin/ver)
